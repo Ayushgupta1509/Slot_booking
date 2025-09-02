@@ -1,0 +1,247 @@
+.slot-booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.header-section h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.reset-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.reset-button:hover {
+  background-color: #c0392b;
+}
+
+.debug-button {
+  background-color: #7f8c8d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.debug-button:hover {
+  background-color: #636e72;
+}
+
+.slot-booking-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.slot-booking-nav button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slot-booking-nav button:hover {
+  background-color: #1c6ea4;
+}
+
+.slot-booking-nav h3 {
+  margin: 0;
+}
+
+.slot-booking-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.day-header {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #34495e;
+  color: white;
+  border-radius: 5px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-day.available {
+  background-color: white;
+}
+
+.calendar-day.available:hover {
+  background-color: #e8f4fc;
+}
+
+.calendar-day.selected {
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+}
+
+.calendar-day.today {
+  background-color: #f39c12;
+  color: white;
+  font-weight: bold;
+}
+
+.calendar-day.past {
+  background-color: #ecf0f1;
+  color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.calendar-day.empty {
+  border: none;
+  background-color: transparent;
+  cursor: default;
+}
+
+.selected-date {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e8f4fc;
+  border-radius: 5px;
+  border-left: 4px solid #3498db;
+}
+
+.selected-date h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.time-slots {
+  margin-top: 20px;
+}
+
+.time-slots h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.time-slot {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot.available {
+  background-color: white;
+}
+
+.time-slot.available:hover {
+  background-color: #e8f4fc;
+  transform: translateY(-2px);
+}
+
+.time-slot.selected {
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+}
+
+.time-slot.full {
+  background-color: #e74c3c;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.booking-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.confirm-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.confirm-button:hover {
+  background-color: #2980b9;
+}
+
+.confirmation-message {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.confirmation-message h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .slot-booking-container {
+    padding: 10px;
+  }
+  
+  .header-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .time-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
